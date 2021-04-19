@@ -102,7 +102,7 @@ if __name__ == '__main__':
     train_model(sampling_rate = 22050,
                 n_batches = 30000,
                 batch_size = 128,
-                audio_path = 'audio/',
+                audio_path = 'audio/knocking/',
                 checkpoints_path = 'checkpoints/',
                 architecture_size = 'large',
                 path_to_weights = 'model_weights.h5',
