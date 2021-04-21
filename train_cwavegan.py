@@ -3,6 +3,10 @@ import wgangp
 import utils
 from tensorflow.keras.optimizers import Adam
 
+# import tensorflow as tf
+# config = tf.ConfigProto()
+# config.gpu_options.allow_growth = True
+
 def train_model(sampling_rate = 22050,
                 n_batches = 10000,
                 batch_size = 128,
@@ -100,12 +104,12 @@ def train_model(sampling_rate = 22050,
 
 
 if __name__ == '__main__':
-    train_model(sampling_rate = 22050,
+    train_model(sampling_rate = 8000,
                 n_batches = 30000,
-                batch_size = 128,
+                batch_size = 32,
                 audio_path = 'audio/knocking/',
                 checkpoints_path = 'checkpoints/',
-                architecture_size = 'large',
+                architecture_size = 'small',
                 path_to_weights = 'model_weights.h5',
                 resume_training = False,
                 override_saved_model = True,
