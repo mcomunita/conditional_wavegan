@@ -89,6 +89,7 @@ def train_model(sampling_rate = 22050,
     #load the desired weights in path (if resuming training)
     if resume_training == True:
         print(f'Resuming training. Loading weights in {path_to_weights}')
+        gan.built = True
         gan.load_weights(path_to_weights)
     
     #train the gan for the desired number of batches
