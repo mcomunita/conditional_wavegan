@@ -104,10 +104,10 @@ def train_model(sampling_rate = 22050,
 
 
 if __name__ == '__main__':
-    train_model(sampling_rate = 8000,
-                n_batches = 30000,
-                batch_size = 32,
-                audio_path = 'audio/knocking/',
+    train_model(sampling_rate = 16000,
+                n_batches = 20000,
+                batch_size = 128,
+                audio_path = 'audio/footsteps/',
                 checkpoints_path = 'checkpoints/',
                 architecture_size = 'small',
                 path_to_weights = 'model_weights.h5',

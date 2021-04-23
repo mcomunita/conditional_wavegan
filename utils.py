@@ -24,7 +24,7 @@ def load_audio(audio_path, sr, audio_size_samples):
 #save the label names for inference
 def save_label_names(audio_path, save_folder):
     label_names = {}
-    for i, folder in enumerate(next(os.walk(audio_path))[1]):
+    for i, folder in enumerate(sorted(next(os.walk(audio_path))[1])):
         label_names[i] = folder
     #save the dictionary to use it later with the standalone generator
     with open(os.path.join(save_folder, 'label_names.json'), 'w') as outfile:
@@ -44,7 +44,7 @@ def create_dataset(audio_path, sample_rate, architecture_size, labels_saving_pat
     save_label_names(audio_path, labels_saving_path)
     audio = []
     labels_names = []
-    for folder in next(os.walk(audio_path))[1]:
+    for folder in sorted(next(os.walk(audio_path))[1]):
         for wavfile in os.listdir(audio_path+folder):
             audio.append(load_audio(audio_path = f'{audio_path}{folder}/{wavfile}', sr = sample_rate, audio_size_samples = audio_size_samples))
             labels_names.append(folder)
