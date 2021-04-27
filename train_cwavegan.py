@@ -120,4 +120,4 @@ if __name__ == '__main__':
                 discriminator_learning_rate = 0.0002,
                 generator_learning_rate = 0.0002,
                 discriminator_extra_steps = 5,
-                phaseshuffle_samples = 0)
+                phaseshuffle_samples = 2)
