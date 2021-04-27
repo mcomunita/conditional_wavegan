@@ -3,6 +3,10 @@ import wgangp
 import utils
 from tensorflow.keras.optimizers import Adam
 
+# import tensorflow as tf
+# config = tf.ConfigProto()
+# config.gpu_options.allow_growth = True
+
 def train_model(sampling_rate = 22050,
                 n_batches = 10000,
                 batch_size = 128,
@@ -89,6 +93,7 @@ def train_model(sampling_rate = 22050,
     #load the desired weights in path (if resuming training)
     if resume_training == True:
         print(f'Resuming training. Loading weights in {path_to_weights}')
+        gan.built = True
         gan.load_weights(path_to_weights)
     
     #train the gan for the desired number of batches
@@ -99,12 +104,12 @@ def train_model(sampling_rate = 22050,
 
 
 if __name__ == '__main__':
-    train_model(sampling_rate = 22050,
-                n_batches = 30000,
+    train_model(sampling_rate = 16000,
+                n_batches = 20000,
                 batch_size = 128,
-                audio_path = 'audio/knocking/',
+                audio_path = 'audio/footsteps/',
                 checkpoints_path = 'checkpoints/',
-                architecture_size = 'large',
+                architecture_size = 'small',
                 path_to_weights = 'model_weights.h5',
                 resume_training = False,
                 override_saved_model = True,
@@ -115,4 +120,4 @@ if __name__ == '__main__':
                 discriminator_learning_rate = 0.0002,
                 generator_learning_rate = 0.0002,
                 discriminator_extra_steps = 5,
-                phaseshuffle_samples = 0)
+                phaseshuffle_samples = 2)
