@@ -107,7 +107,7 @@ if __name__ == '__main__':
     train_model(sampling_rate = 16000,
                 n_batches = 20000,
                 batch_size = 128,
-                audio_path = 'audio/footsteps/',
+                audio_path = '../_data/footsteps_real/',
                 checkpoints_path = 'checkpoints/',
                 architecture_size = 'small',
                 path_to_weights = 'model_weights.h5',
@@ -120,4 +120,4 @@ if __name__ == '__main__':
                 discriminator_learning_rate = 0.0002,
                 generator_learning_rate = 0.0002,
                 discriminator_extra_steps = 5,
-                phaseshuffle_samples = 2)
+                phaseshuffle_samples = 0)
