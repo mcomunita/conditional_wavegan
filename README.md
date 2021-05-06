@@ -1,3 +1,9 @@
+## This repo is derived from:
+
+[https://github.com/adrianbarahona/conditional_wavegan_knocking_sounds](https://github.com/adrianbarahona/conditional_wavegan_knocking_sounds)
+
+---
+
 #### Keras implementation of conditional waveGAN. Application to knocking sound effects.
 
 Original waveGAN architecture: https://github.com/chrisdonahue/wavegan
