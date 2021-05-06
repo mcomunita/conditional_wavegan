@@ -2,6 +2,10 @@
 
 [https://github.com/adrianbarahona/conditional_wavegan_knocking_sounds](https://github.com/adrianbarahona/conditional_wavegan_knocking_sounds)
 
+## and is used as a submodule for:
+
+[https://github.com/mcomunita/ccwavegan](https://github.com/mcomunita/ccwavegan)
+
 ---
 
 #### Keras implementation of conditional waveGAN. Application to knocking sound effects.
